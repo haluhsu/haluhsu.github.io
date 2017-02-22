@@ -18,6 +18,11 @@ $(function () {
         }, 'fast')
     })
 })
+        $(function() {
+            $("img").lazyload({
+                effect : "fadeIn",
+            });
+        })
 $(function () {
     $('img').on('mousedown', function (e) {
         e.preventDefault()
