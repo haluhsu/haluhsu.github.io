@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://blog.csdn.net/electroniXtar/ -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FLEX旅游网静态页面</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/reset-css.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/jquery-1.10.2.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/calendar.js"></script>
+</head>
+<body>
+<div class='tip-bar'>
+    <a href="javascript:;" class=' tip-bar-icon-totop'>
+        <i class='tip-bar-icon icon-totop'></i>
+        <em>返回顶部</em>
+    </a>
+    <a href="javascript:;" class='tip-bar-icon-feedback'>
+         <i class='tip-bar-icon icon-feedback'></i>
+        <em>意见反馈</em>
+    </a>
+    <a href="javascript:;"class='tip-bar-icon-follow'>
+         <i class='tip-bar-icon icon-follow'></i>
+        <em>
+            扫码关注
+            <img src="./img/icon-sprites/follow.png" alt="" class="follow">
+        </em>
+    </a>
+</div>
+<!--登录注册开始-->
+<div class="mask"></div>
+<div id="login_box" >
+        <div class="login-box" >
+            <div class="login-register-times">&times;</div>
+            <div
+                    class="loginitem"><input type="text" id="sUserName" placeholder="您的手机号"
+                                             class="loginitem-username login-input-common" name="user"></div>
+            <div
+                    class="loginitem"><input type="password" id='sPwd' placeholder="您的密码" class="loginitem-pwd login-input-common"
+                                             name="password"></div>
+            <div class="loginitem-wrong"></div>
+            <div class="login-btn-forget clearfix">
+                <a href="javascript:;"  class="login-btn-forget-left quick-reg">还没有帐号?马上注册</a>
+                <a href="javascript:;" class="login-btn-forget-right">忘记密码?</a>
+            </div>
+            <div class="login-btn">
+            <input type="button" href="javascript:;" class="login-btn-subimt login-btn-common" value="登 录" onclick="login()">
+            </div>
+            <!--<a>还没有帐号?马上注册</a>-->
+            <div class="connect">
+                <p class="connect-p">
+                直接登录
+                </p>
+                <div >
+                    <ul class="connect-login-methods clearfix">
+                        <li class="weibo"><a href="javascript:;">
+                            <i></i>
+                            新浪微博
+                        </a></li>
+                        <li class="qq"><a href="javascript:;">
+                            <i></i>
+                                QQ
+                        </a></li>
+                        <li class="weixin"><a href="javascript:;">
+                            <i></i>
+                            微信
+                        </a></li>
+                        <li class="renren"><a href="javascript:;">
+                            <i></i>
+                            人人网
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="login-register ">
+            <div class="login-register-times">&times;</div>
+            <div
+                    class="loginitem"><input type="text"  placeholder="请输入您的手机号"
+                                             class="register-user login-input-common" name="user"></div>
+            <div class="login-btn">
+                <input type="button" href="javascript:;" class="register-btn login-btn-common" value="立即注册">
+            </div>
+            <div class="login-btn-forget clearfix">
+                <a href="javascript:;"  class="login-btn-forget-left quick-login">马上登录</a>
+                <a href="javascript:;" class="login-btn-forget-right">请阅读《用户使用协议》</a>
+            </div>
+            <div class="connect">
+                <p class="connect-p">
+                    直接登录
+                </p>
+                <div>
+                    <ul class="connect-login-methods clearfix">
+                        <li class="weibo"><a href="javascript:;">
+                            <i></i>
+                            新浪微博
+                        </a></li>
+                        <li class="qq"><a href="javascript:;">
+                            <i></i>
+                            QQ
+                        </a></li>
+                        <li class="weixin"><a href="javascript:;">
+                            <i></i>
+                            微信
+                        </a></li>
+                        <li class="renren"><a href="javascript:;">
+                            <i></i>
+                            人人网
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+<!--登录注册框结束-->
+<!-- 导航栏 -->
+<div class="warming">
+    <div class="warming-box">
+        检测到您使用低版本IE浏览器，建议升级
+        <a href="http://www.firefox.com.cn/" target="_blank">点此下载</a>
+        <span>&times;</span>
+    </div>
+</div>
+<div class='nav'>
+    <div class='nav-box'>
+        <div class='nav-box-logo'>FLEX</div>
+        <ul class='nav-box-item'>
+            <li class="nav-first-li"><a href='javascript:;'>首页</a></li>
+            <li><a href='javascript:;'>目的地</a></li>
+            <li><a href='javascript:;'>旅游攻略</a></li>
+            <li class="tbf"><a href='javascript:;'>
+                <span>自由行商城 <i></i></span></a>
+                <ul>
+                    <li><a href="javascript:;">机票+酒店 <i class="hot">hot</i> </a></li>
+                    <li><a href="javascript:;">当地游</a></li>
+                    <li><a href="javascript:;">国内机票 <i class="new">new</i> </a></li>
+                    <li><a href="javascript:;">签证</a></li>
+                    <li><a href="javascript:;">国际租车</a></li>
+                    <li><a href="javascript:;">保险</a></li>
+                </ul>
+            </li>
+            <li><a href='javascript:;'>酒店</a></li>
+            <li><a href='javascript:;'>社区</a></li>
+            <li><a href='javascript:;'>APP</a></li>
+        </ul>
+        <ul class="nav-box-login">
+            <li><a href="javascript:;" class="nav-box-log">登录</a></li>
+            <li><a href="javascript:;" class="nav-box-reg">注册</a></li>
+        </ul>
+        <div class="nav-box-logined">
+            欢迎回来:<span></span>
+            <a href="javascript:;" onclick="removeSession()">注销</a>
+        </div>
+    </div>
+</div>
+<!-- 导航结束 -->
+
+<!-- 轮播图开始 -->
+<div class='slider'>
+    <div class="search">
+        <div class="search-box clearfix">
+            <ul class="clearfix search-tab">
+                <li>
+                    <i class="current"></i>
+                    全部
+                </li>
+                <li>
+                    <i></i>
+                    酒店
+                </li>
+                <li>
+                    <i></i>
+                    目的地
+                </li>
+                <li>
+                    <i></i>
+                    自由行商城
+                </li>
+            </ul>
+            <div class="search-place">
+                <input type="text" placeholder="请输入国家、地区、城市名称">
+            </div>
+            <div class="search-calendar">
+                <i class="date-icon start"></i>
+                <input type="text" class="startTime" placeholder="选择出发日期"/>
+            </div>
+            <div class="search-calendar search-endTime">
+                <i class="date-icon end"></i>
+                <input type="text" class="endTime" placeholder="选择离开日期"/>
+            </div>
+            <div class="search-btn">
+                <a href="javascript:;">
+                    <i class="search-icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="welcome">
+        <h3><a href="javascript:;"><span>B</span>OOKING一场旅行</a></h3>
+        <p><a href="javascript:;">遇见美好时光</a></p>
+    </div>
+    <i class="left"></i>
+    <i class="right"></i>
+    <ul class="clearfix slider-pic">
+        <li>
+            <img src="./img/bg01.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/bg02.jpg" alt="">
+        </li>
+        <li>
+            <img src="./img/bg03.jpg" alt="">
+        </li>
+    </ul>
+</div>
+<!-- 轮播图结束 -->
+
+<!-- 我们的城市开始 -->
+<div class='city'>
+    <div class='city-box'>
+        <h3 class='h3'>爆款热卖</h3>
+        <ul class='clearfix city-img'>
+
+            <li>
+                <div class="effect-bubba-box">
+                    <div class="effect-bubba">
+                        <img src="./img/OurCity/pek.png" alt="">
+                        <div class="effect-figcaption">
+                            <h4>北京逛故宫最全技能Get</h4>
+                            <p>北京土著说：我逛不逛，它都在那儿，我想啥时候逛就啥时候逛！外地游客说：来到大北京，必须逛故宫！常住在北京的外地人说：...</p>
+                        </div>
+                    </div>
+                    <h3 class="effect-h3">北京直飞三亚5天4晚自由行（9大豪华五星酒店可选+接送机+超值赠送5选1+意险）</h3>
+                </div>
+                <div class="price">
+                    &yen;
+                    <strong>3550</strong>
+                    <span>起/人</span>
+                </div>
+            </li>
+            <li>
+                <div class="effect-bubba-box">
+                    <div class="effect-bubba">
+                        <img src="./img/OurCity/suv.jpg" alt="">
+                        <div class="effect-figcaption">
+                            <h4>远离雾霾，去斐济迎接世界第一缕阳光</h4>
+                            <p>在我们为各地的雾霾感到忧心的时候，不如一起逃离去斐济吧~转动地球仪，在南太平洋的中央，你会看到一片小小的岛屿，其中180...</p>
+                        </div>
+                    </div>
+                    <h3 class="effect-h3">香港直飞斐济8天6晚自由行（可游玩双岛或单岛+入住3星或4星或5星酒店+全国联运+含税+接送机+多酒店选择+多航空选择）</h3>
+                </div>
+                <div class="price">
+                    &yen;
+                    <strong>3899</strong>
+                    <span>起/人</span>
+                </div>
+            </li>
+            <li>
+                <div class="effect-bubba-box">
+                    <div class="effect-bubba">
+                        <img src="./img/OurCity/cju.jpg" alt="">
+                        <div class="effect-figcaption">
+                            <h4>资深达人告诉你济州到底应该怎么玩儿</h4>
+                            <p>济州岛是韩国最大的岛屿，全年气候温和，素有“韩国的夏威夷”之称。这里也是一个纯净、富足而淳朴的桃源之地，四季景色各有...</p>
+                        </div>
+                    </div>
+                    <h3 class="effect-h3">【元宵/清明/五一】上海直飞济州4天3晚/5天4晚自由行（精选新罗舒泰酒店或同级+免费接送机服务+15KG手提行李)</h3>
+                </div>
+                <div class="price">
+                    &yen;
+                    <strong>1100</strong>
+                    <span>起/人</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!-- 我们的城市结束 -->
+
+<!-- 我们的景点开始 -->
+<div class='scenery '>
+    <div class='scenery-box'>
+        <h3 class='h3'>热门景点</h3>
+        <ul class='clearfix '>
+            <li>
+                <img src="./img/OurScenery/sin.jpg" alt="">
+                <div>
+                    <h3>新加坡</h3>
+                    <p class='scenery-hotel'>484家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">70
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/sel.jpg" alt="">
+                <div>
+                    <h3>首尔</h3>
+                    <p class='scenery-hotel'>1575家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">62
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/bkk.jpg" alt="">
+                <div>
+                    <h3>曼谷</h3>
+                    <p class='scenery-hotel'>2222家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">18
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/nrt.jpg" alt="">
+                <div>
+                    <h3>东京</h3>
+                    <p class='scenery-hotel'>1665家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">121
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/kul.jpg" alt="">
+                <div>
+                    <h3>吉隆坡</h3>
+                    <p class='scenery-hotel'>144家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">170
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/kix.jpg" alt="">
+                <div>
+                    <h3>大阪</h3>
+                    <p class='scenery-hotel'>1718家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">44
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/hkg.jpg" alt="">
+                <div>
+                    <h3>香港</h3>
+                    <p class='scenery-hotel'>484家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">70
+                        </span>起</p>
+                </div>
+            </li>
+            <li>
+                <img src="./img/OurScenery/bal.jpg" alt="">
+                <div>
+                    <h3>巴厘岛</h3>
+                    <p class='scenery-hotel'>484家酒店</p>
+                    <p class="scenery-box-price"><span class="scenery-box-yen">&yen;</span><span
+                            class="scenery-box-pay">70
+                        </span>起</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 我们的景点结束 -->
+
+<!--热门游记开始-->
+<div class="travels">
+    <div class="travels-box clearfix">
+        <div class="travels-left">
+            <div class="travels-left-top-introduce">
+                <div class="clearfix">
+                    <h3>旅游攻略推荐</h3>
+                    <a href="javascript:;" class="more">更多>></a>
+                </div>
+                <div class="travels-left-img clearfix">
+                    <ul class='travel-top'>
+                        <li class='travel-bkk'>
+                            <a href="javascript:;">
+                            <div class='pic-mask'>
+                                <h3 class='pic-title'>
+                                   塞班
+                                </h3>
+                            </div>
+                                <div class='pic-bg'></div>
+                            </a>
+                        </li>
+                                       <li class='travel-syd'>
+                            <a href="javascript:;">
+                            <div class='pic-mask'>
+                                <h3 class='pic-title'>
+                                   澳洲
+                                </h3>
+                            </div>
+                                <div class='pic-bg'></div>
+                            </a>
+                        </li>
+                                       <li class='travel-nrt'>
+                            <a href="javascript:;">
+                            <div class='pic-mask'>
+                                <h3 class='pic-title'>
+                                   东京
+                                </h3>
+                            </div>
+                                <div class='pic-bg'></div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <ul>
+                    <li>
+                        <a>AAA </a>点评了 普陀区的 <a>沈家门渔港</a>
+                    </li>
+                    <li>
+                        <a>AAA </a>点评了 普陀区的 <a>沈家门渔港</a>
+                    </li>
+                    <li>
+                        <a>AAA </a>点评了 普陀区的 <a>沈家门渔港</a>
+                    </li>
+                    <li>
+                        <a>AAA </a>点评了 普陀区的 <a>沈家门渔港</a>
+                    </li>
+                    <li>
+                        <a>AAA </a>点评了 普陀区的 <a>沈家门渔港</a>
+                    </li>
+                    <li>
+                        <a>AAA </a>点评了 普陀区的 <a>沈家门渔港</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="travels-left-activity">
+                <div class="clearfix">
+                    <h3>我的活动</h3>
+                    <span>正在进行</span>
+                </div>
+                <div class="travels-left-activeity">
+                    <a href="javascript:;" class="clearfix">
+                        <img src="./img/travels/activity.png" alt="">
+                        <strong>遇见美好时光</strong><br>
+                        有机会开启阿姆斯特丹参观之旅！
+                    </a>
+                    <a href="javascript:;" class="clearfix">
+                        <img src="./img/travels/activity.png" alt="">
+                        <strong>遇见美好时光</strong><br>
+                        有机会开启阿姆斯特丹参观之旅！
+                    </a>
+                    <a href="javascript:;" class="clearfix">
+                        <img src="./img/travels/activity.png" alt="">
+                        <strong>遇见美好时光</strong><br>
+                        有机会开启阿姆斯特丹参观之旅！
+                    </a>
+                    <a href="javascript:;" class="clearfix">
+                        <img src="./img/travels/activity.png" alt="">
+                        <strong>遇见美好时光</strong><br>
+                        有机会开启阿姆斯特丹参观之旅！
+                    </a>
+                    <a href="javascript:;" class="clearfix">
+                        <img src="./img/travels/activity.png" alt="">
+                        <strong>遇见美好时光</strong><br>
+                        有机会开启阿姆斯特丹参观之旅！
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="travels-right">
+            <div class="travels-right-title clearfix">
+                <a href="javascript:;" class="hot-travels">热门游记</a>
+                <a href="javascript:;" class="travels-new">最新发表</a>
+                <a href="javascript:;" class="travels-btn">写游记</a>
+            </div>
+            <ul class="clearfix">
+                <li>
+                    <img src="./img/travels/sel.jpg" alt="">
+                    <dl>
+                        <dt><a href="javascript:;">二道桥——一场永不停息的民族盛宴</a></dt>
+                        <dd><a href="javascript:;">（我很喜欢这张照片，我拍照的时候，供游人拍照的鹿主人正好不在）
+                            从某种程度上说，二道桥就是乌鲁木齐的标志和象征，是所有来乌鲁木齐旅游的人必到的地方，是中亚风情的缩影。不幸的是，...</a></dd>
+                    </dl>
+                    <div class="travels-right-msg">
+                        <span class="travels-msg-place">
+                            <i></i>
+                            <a href="javascript:;">泰国，by</a>
+                        </span>
+                             <span class="travels-msg-user">
+                            <a href="javascript:;">
+                                <img src="./img/travels/user.jpg" alt="">&nbsp;
+                                小天使</a>
+                        </span>
+                             <span class="travels-msg-view">
+                            <i></i>
+                            <a href="javascript:;">33429/331</a>
+                        </span>
+                             <span class="travels-msg-ding">
+                            <i></i>
+                            <a href="javascript:;">974</a>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/travels/sel.jpg" alt="">
+                    <dl>
+                        <dt><a href="javascript:;">二道桥——一场永不停息的民族盛宴</a></dt>
+                        <dd><a href="javascript:;">（我很喜欢这张照片，我拍照的时候，供游人拍照的鹿主人正好不在）
+                            从某种程度上说，二道桥就是乌鲁木齐的标志和象征，是所有来乌鲁木齐旅游的人必到的地方，是中亚风情的缩影。不幸的是，...</a></dd>
+                    </dl>
+                    <div class="travels-right-msg">
+                        <span class="travels-msg-place">
+                            <i></i>
+                            <a href="javascript:;">泰国，by</a>
+                        </span>
+                             <span class="travels-msg-user">
+                            <a href="javascript:;">
+                                <img src="./img/travels/user.jpg" alt="">&nbsp;
+                                小天使</a>
+                        </span>
+                             <span class="travels-msg-view">
+                            <i></i>
+                            <a href="javascript:;">33429/331</a>
+                        </span>
+                             <span class="travels-msg-ding">
+                            <i></i>
+                            <a href="javascript:;">974</a>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/travels/sel.jpg" alt="">
+                    <dl>
+                        <dt><a href="javascript:;">二道桥——一场永不停息的民族盛宴</a></dt>
+                        <dd><a href="javascript:;">（我很喜欢这张照片，我拍照的时候，供游人拍照的鹿主人正好不在）
+                            从某种程度上说，二道桥就是乌鲁木齐的标志和象征，是所有来乌鲁木齐旅游的人必到的地方，是中亚风情的缩影。不幸的是，...</a></dd>
+                    </dl>
+                    <div class="travels-right-msg">
+                        <span class="travels-msg-place">
+                            <i></i>
+                            <a href="javascript:;">泰国，by</a>
+                        </span>
+                             <span class="travels-msg-user">
+                            <a href="javascript:;">
+                                <img src="./img/travels/user.jpg" alt="">&nbsp;
+                                小天使</a>
+                        </span>
+                             <span class="travels-msg-view">
+                            <i></i>
+                            <a href="javascript:;">33429/331</a>
+                        </span>
+                             <span class="travels-msg-ding">
+                            <i></i>
+                            <a href="javascript:;">974</a>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/travels/sel.jpg" alt="">
+                    <dl>
+                        <dt><a href="javascript:;">二道桥——一场永不停息的民族盛宴</a></dt>
+                        <dd><a href="javascript:;">（我很喜欢这张照片，我拍照的时候，供游人拍照的鹿主人正好不在）
+                            从某种程度上说，二道桥就是乌鲁木齐的标志和象征，是所有来乌鲁木齐旅游的人必到的地方，是中亚风情的缩影。不幸的是，...</a></dd>
+                    </dl>
+                    <div class="travels-right-msg">
+                        <span class="travels-msg-place">
+                            <i></i>
+                            <a href="javascript:;">泰国，by</a>
+                        </span>
+                             <span class="travels-msg-user">
+                            <a href="javascript:;">
+                                <img src="./img/travels/user.jpg" alt="">&nbsp;
+                                小天使</a>
+                        </span>
+                             <span class="travels-msg-view">
+                            <i></i>
+                            <a href="javascript:;">33429/331</a>
+                        </span>
+                             <span class="travels-msg-ding">
+                            <i></i>
+                            <a href="javascript:;">974</a>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/travels/sel.jpg" alt="">
+                    <dl>
+                        <dt><a href="javascript:;">二道桥——一场永不停息的民族盛宴</a></dt>
+                        <dd><a href="javascript:;">（我很喜欢这张照片，我拍照的时候，供游人拍照的鹿主人正好不在）
+                            从某种程度上说，二道桥就是乌鲁木齐的标志和象征，是所有来乌鲁木齐旅游的人必到的地方，是中亚风情的缩影。不幸的是，...</a></dd>
+                    </dl>
+                    <div class="travels-right-msg">
+                        <span class="travels-msg-place">
+                            <i></i>
+                            <a href="javascript:;">泰国，by</a>
+                        </span>
+                             <span class="travels-msg-user">
+                            <a href="javascript:;">
+                                <img src="./img/travels/user.jpg" alt="">&nbsp;
+                                小天使</a>
+                        </span>
+                             <span class="travels-msg-view">
+                            <i></i>
+                            <a href="javascript:;">33429/331</a>
+                        </span>
+                             <span class="travels-msg-ding">
+                            <i></i>
+                            <a href="javascript:;">974</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <div class="pagination clearfix">
+                <span>共20页/180条</span>
+                <div id="pagination"></div>
+                <!--<a href="javascript:;" class="pagination-prev">首页</a>-->
+                <!--<a href="javascript:;" class="pagination-prev">上一页</a>-->
+                <!--<a href="javascript:;" class="pagination-id">1</a>-->
+                <!--<a href="javascript:;" class="pagination-id pagination-now">2</a>-->
+                <!--<a href="javascript:;" class="pagination-id">3</a>-->
+                <!--<a href="javascript:;" class="pagination-id">4</a>-->
+                <!--<a href="javascript:;" class="pagination-id">5</a>-->
+                <!--<a href="javascript:;" class="pagination-id">6</a>-->
+                <!--<a href="javascript:;" class="pagination-id">7</a>-->
+                <!--<a href="javascript:;" class="pagination-id">8</a>-->
+                <!--<a href="javascript:;" class="pagination-id">9</a>-->
+                <!--<a href="javascript:;" class="pagination-next">下一页</a>-->
+                <!--<a href="javascript:;" class="pagination-next">尾页</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--热门游记结束-->
+
+
+<!--我们的导游开始-->
+<div class='guide '>
+    <div class='guide-box'>
+        <h3 class='h3'>我们的导游</h3>
+        <ul class='clearfix'>
+            <li class="guide-item">
+                <a href="javascript:;">
+                    <img src="./img/guide/guide1.png" alt="">
+                    <h3 class='guide-box-tit'>李晓晓</h3>
+                    <p class='guide-box-info'>全国优秀导游员。他在导游过程中，尊老爱幼，文明礼貌，急顾客所及，想顾客所想，是顾客的贴心人。</p>
+                </a>
+
+            </li>
+            <li class="guide-item">
+                <a href="javascript:;">
+                    <img src="./img/guide/guide2.png" alt="">
+                    <h3 class='guide-box-tit'>李晓晓</h3>
+                    <p class='guide-box-info'>全国优秀导游员。他在导游过程中，尊老爱幼，文明礼貌，急顾客所及，想顾客所想，是顾客的贴心人。</p>
+                </a>
+
+            </li>
+            <li class="guide-item">
+                <a href="javascript:;">
+                    <img src="./img/guide/guide3.png" alt="">
+                    <h3 class='guide-box-tit'>李晓晓</h3>
+                    <p class='guide-box-info'>全国优秀导游员。他在导游过程中，尊老爱幼，文明礼貌，急顾客所及，想顾客所想，是顾客的贴心人。</p>
+                </a>
+
+            </li>
+            <li class="guide-item">
+                <a href="javascript:;">
+                    <img src="./img/guide/guide4.png" alt="">
+                    <h3 class='guide-box-tit'>李晓晓</h3>
+                    <p class='guide-box-info'>全国优秀导游员。他在导游过程中，尊老爱幼，文明礼貌，急顾客所及，想顾客所想，是顾客的贴心人。</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--我们的导游结束-->
+
+<!--联系我们开始-->
+<div class='contact-us'>
+    <div class='contact-box'>
+        <h3 class='h3'>联系我们</h3>
+        <div class="contact">
+            <ul class="clearfix">
+                <li class="contact-item"><a href="tel:">
+                    <img src="./img/ContactUs/1.png" alt=""></a>
+                    <p>上海市黄浦区1号901</p>
+                </li>
+                <li class="contact-item">
+                    <img src="./img/ContactUs/2.png" alt="">
+                    <p>298665783@qq.com</p>
+                </li>
+                <li class="contact-item">
+                    <img src="./img/ContactUs/3.png" alt="">
+                    <p>+139 1824 7032</p>
+                </li>
+            </ul>
+        </div>
+        <div class="form">
+            <form>
+                <div>
+                    <input type="text" placeholder="姓名" class="user">
+                    <input type="text" placeholder="邮箱" class="mail">
+                </div>
+                <div class="form-textarea">
+                    <textarea name="" id="" placeholder="有什么对我们说的"></textarea>
+                </div>
+                <input type="button" value="提交" class="submit">
+            </form>
+        </div>
+    </div>
+</div>
+<!--联系我们结束-->
+</body>
+</html>

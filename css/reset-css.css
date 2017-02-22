@@ -1,0 +1,61 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+body,html{
+    font-family: verdana,Arial,"Lucida Grande","Microsoft Yahei","Hiragino Sans GB","Hiragino Sans GB W3",STHeiti;
+    background:#f5f5f5;
+}
+
+textarea{
+    outline: none;
+}
+.sec{
+    min-width:1100px;
+}
+img{
+    border:none;
+}
+ul{
+    list-style: none;
+}
+input{
+    outline: none;
+    border:none;
+    font-family: verdana,Arial,"Lucida Grande","Microsoft Yahei","Hiragino Sans GB","Hiragino Sans GB W3",STHeiti;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    outline: none;
+}
+.clearfix:after{
+    display: block;
+    clear:both;
+    content:'';
+}
+.clearfix{
+    zoom: 1;
+}
+.bg-gray{
+    background:#eeeeee;;
+}
+textarea{
+    resize: none;
+    overflow:visible
+}
+button{
+    border:0;
+    outline: none;
+}
