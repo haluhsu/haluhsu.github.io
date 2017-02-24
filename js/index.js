@@ -33,6 +33,11 @@ $(function () {
         setCenter();
     })
 })
+$(function(){
+    $(window).scroll(function(){
+        throttle(scrollBar,window);
+    })
+})
 $(function () {
     $('.tbf').hover(function () {
         $(this).find('ul').stop(false,true).fadeIn();
@@ -87,6 +92,24 @@ $(function () {
         allNum: 20
     });
 })
+function throttle(method,context){
+    clearTimeout(method.tId);
+    method.tId=setTimeout(function(){
+        method.call(context);
+    },300);
+}
+function scrollBar(){
+    var scrollTop=$(window).scrollTop();
+    console.log(scrollTop)
+    var oScrollBar=$('.tip-bar');
+    var iHeight=$('.slider').offset().top+$('.slider').outerHeight();
+    if(scrollTop>iHeight){
+        oScrollBar.fadeIn(500);
+    }else{
+        oScrollBar.fadeOut(500);
+    }
+
+}
 function page(options) {
     var obj = $(options.id);
     var nowNum = options.nowNum;

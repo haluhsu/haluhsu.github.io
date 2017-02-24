@@ -5,10 +5,12 @@ body{
     position: relative;
 }
 .tip-bar{
-    position:absolute;
+    position:fixed;
     right:50%;
-    bottom:542px;
-    margin-right: -596px;
+    bottom:100px;
+    margin-right: -620px;
+    z-index: 10;
+    display: none;
 }
 .tip-bar a{
     width:45px;
@@ -1338,68 +1340,18 @@ background:url(../img/travels/travel-nrt.jpg) no-repeat center 0;
 }
 
 /*我们的导游结束*/
-/*联系我们开始*/
-.contact-us {
-    margin-top: 10px;
-    width: 100%;
-    min-width: 1100px;
-}
 
-.contact-box {
-    width: 1100px;
-    margin: 0 auto;
-}
-
-.contact ul {
-    margin-top: 10px;
-    border-bottom: 1px solid #e1e1e1;
-    text-align: center;
-    color: #333333;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.contact ul li {
-    float: left;
-    width: 33.33333333%;
-}
-
-.contact ul img {
-    transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-}
-
-.contact ul li p {
-    font-size: 14px;
-    transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-    margin-bottom: 5px;
-}
-
-.contact-item:hover img {
-    transform-origin: center center;
-    -webkit-transform-origin: center center;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-}
-
-.contact-item:hover p {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    color: #ec523f;
-}
-/*联系我们结束*/
 /*底部开始*/
 .foot{
     width:100%;
     min-width: 1100px;
     background-color: #3c3c3c;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     color:#fff;
     margin-top: 5px;
-    line-height: 1.5;
-    padding:10px 0;
+    line-height: 1.8;
+    padding:10px 0 5px 0;
 }
 .foot span{
     color:#ff9d00;
