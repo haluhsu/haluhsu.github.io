@@ -860,13 +860,13 @@ div.effect-bubba:hover p {
 
 .scenery li img {
     transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
     vertical-align: top;
     width: 100%;
     height: 100%;
 }
 
-.scenery li:hover img {
+.scenery li:hover img{
     -webkit-transform: scale(1.2);
    transform: scale(1.2);
 }
@@ -886,11 +886,14 @@ div.effect-bubba:hover p {
     margin-left: -37%;
     margin-top: -33%;
     background: rgb(0, 0, 0);
-    opacity: 0.7;
-    filter: alpha(opacity=70);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
     color: #fff;
 }
-
+.scenery li:hover div{
+    background: rgb(0, 0, 0);
+    opacity: 0.7;
+}
 .scenery-box li div h3 {
     text-align: center;
     font-weight: 700;
@@ -906,7 +909,7 @@ div.effect-bubba:hover p {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 3px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .scenery-box .scenery-box-price {
@@ -1340,7 +1343,6 @@ background:url(../img/travels/travel-nrt.jpg) no-repeat center 0;
     margin-top: 10px;
     width: 100%;
     min-width: 1100px;
-    padding-bottom:10px;
 }
 
 .contact-box {
@@ -1386,61 +1388,20 @@ background:url(../img/travels/travel-nrt.jpg) no-repeat center 0;
     -webkit-transform: scale(1.1);
     color: #ec523f;
 }
-
-.form {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    color: #333333;
-    font-size: 16px;
-}
-
-.form form {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.form form div input {
-    width: 48%;
-    float: left;
-    height: 40px;
-    border: 1px solid #a9a9a9;
-    color: #444444;
-    text-indent: 2em;
-    line-height: 40px;
-    font-size: 14px;
-}
-
-.form form .user {
-    float: left;
-}
-
-.form form .mail {
-    float: right;
-}
-
-.form form .submit {
-    width: 106px;
-    height: 40px;
-    border-radius: 3px;
-    color: #ffffff;
-    line-height: 40px;
-    background: #ec523f;
-    display: block;
-    font-size: 14px;
-    border: none 0;
-    margin: 0 auto;
-}
-
-.form-textarea textarea {
-    width: 100%;
-    height: 200px;
-    overflow: auto;
-    border: 1px solid #a9a9a9;
-    color: #444444;
-    font-size: 14px;
-    padding-top: 10px;
-    text-indent: 2em;
-    margin-top: 10px;
-}
 /*联系我们结束*/
+/*底部开始*/
+.foot{
+    width:100%;
+    min-width: 1100px;
+    background-color: #3c3c3c;
+    text-align: center;
+    font-size: 14px;
+    color:#fff;
+    margin-top: 5px;
+    line-height: 1.5;
+    padding:15px 0 10px 0;
+}
+.foot span{
+    color:#ff9d00;
+}
+/*底部结束*/
