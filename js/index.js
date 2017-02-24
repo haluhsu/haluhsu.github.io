@@ -100,7 +100,6 @@ function throttle(method,context){
 }
 function scrollBar(){
     var scrollTop=$(window).scrollTop();
-    console.log(scrollTop)
     var oScrollBar=$('.tip-bar');
     var iHeight=$('.slider').offset().top+$('.slider').outerHeight();
     if(scrollTop>iHeight){
