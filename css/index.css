@@ -7,7 +7,7 @@ body{
 .tip-bar{
     position:fixed;
     right:50%;
-    bottom:100px;
+    bottom:150px;
     margin-right: -620px;
     z-index: 0;
     display: none;
@@ -64,8 +64,9 @@ body{
     width:100px;
     height:100px;
     position: absolute;
-    left:-110px;
+    right:-110px;
     top:-50px;
+    z-index: 999;
 }
 .mask{
     position: fixed;
